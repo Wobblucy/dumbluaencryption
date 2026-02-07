@@ -67,7 +67,7 @@ The following are included **strictly for educational analysis**:
 - Basic anti-tamper checks
 - Self-destructing plaintext logic
 
-These techniques **raise the cost of casual inspection**, but do not provide real security.
+These techniques **raise the cost of inspection**, but would not stand up to someone dedicated to reversing the code. 
 
 ---
 

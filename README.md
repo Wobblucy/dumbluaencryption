@@ -14,9 +14,6 @@ The goal of this project is **research and learning**, not security enforcement.
 
 It illustrates how a character-bound “license” *could* be derived, obfuscated, and validated entirely on the client — **without servers, accounts, or online verification**. Everything runs locally from a zip file and is intentionally easy to inspect, modify, and reverse.
 
-> ⚠️ This is **not** a production licensing system.  
-> Client-side protections are inherently bypassable and should never be treated as secure DRM.
-
 ---
 
 ## What This Demonstrates

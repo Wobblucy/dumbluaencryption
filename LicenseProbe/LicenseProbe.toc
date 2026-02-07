@@ -1,0 +1,11 @@
+## Interface: 110207, 120000
+## Title: License Probe
+## Notes: Generates a character-bound license hash for addon licensing demo
+## Author: Demo
+## Version: 1.0.0
+
+Mocks\WoWAPI.lua
+SignalCollector.lua
+HashGenerator.lua
+UI.lua
+Core.lua

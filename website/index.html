@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Compiler - Addon Licensing Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>License Compiler</h1>
+            <p class="subtitle">Character-Bound Addon Generation</p>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <section id="input-section" class="card">
+                <h2>Step 1: Enter License Hash</h2>
+                <p>Paste the hash from your License Probe addon below.</p>
+                <div class="input-group">
+                    <input type="text" id="hash-input"
+                           placeholder="ADDON-XXXX-XXXX-XXXX-XXXX"
+                           autocomplete="off"
+                           spellcheck="false">
+                    <button id="compile-btn" onclick="startCompilation()">Compile Addon</button>
+                </div>
+                <p id="error-message" class="error hidden"></p>
+            </section>
+
+            <!-- Processing Section -->
+            <section id="processing-section" class="card hidden">
+                <h2>Compiling Your Addon</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <p id="status-text" class="status-text">Initializing...</p>
+                <ul id="stage-list" class="stage-list"></ul>
+            </section>
+
+            <!-- Download Section -->
+            <section id="download-section" class="card hidden">
+                <h2>Compilation Complete</h2>
+                <p>Your character-bound addon package is ready.</p>
+                <div class="hash-display" id="final-hash"></div>
+                <button id="download-btn" class="download-btn">Download Files (3)</button>
+                <p class="expiry-notice" id="expiry-notice"></p>
+            </section>
+
+            <!-- Installation Steps Section -->
+            <section id="steps-section" class="card hidden">
+                <h2>Installation Guide</h2>
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Locate your AddOns folder</h3>
+                        <p>Navigate to your World of Warcraft installation:</p>
+                        <code class="path">World of Warcraft\_retail_\Interface\AddOns\</code>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Create the addon folder</h3>
+                        <p>Create a new folder named exactly:</p>
+                        <code class="path">LicenseDemo</code>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Move the downloaded files</h3>
+                        <p>Put all 3 files into the LicenseDemo folder:</p>
+                        <ul class="file-list">
+                            <li><code>LicenseDemo.toc</code></li>
+                            <li><code>Core.lua</code></li>
+                            <li><code>Data.lua</code></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Reload the game</h3>
+                        <p>In WoW, type:</p>
+                        <code class="command">/reload</code>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Verify it works</h3>
+                        <p>Type this command to see the license status:</p>
+                        <code class="command">/ldemo</code>
+                    </div>
+                </div>
+
+                <p class="warning">
+                    License expires in 15 minutes. After expiry, generate a new hash and repeat.
+                </p>
+
+                <button onclick="location.reload()" class="restart-btn">Generate New License</button>
+            </section>
+        </main>
+
+        <footer>
+            <p class="disclaimer">
+                Educational Demo: This system demonstrates that client-side DRM
+                is security theater. All protection is psychological, not cryptographic.
+            </p>
+        </footer>
+    </div>
+
+    <!-- JavaScript modules -->
+    <script src="js/hashValidator.js"></script>
+    <script src="js/keyDeriver.js"></script>
+    <script src="js/controlFlowFlattener.js"></script>
+    <script src="js/symbolEraser.js"></script>
+    <script src="js/integrityTrapper.js"></script>
+    <script src="js/temporalBinder.js"></script>
+    <script src="js/payloadEncoder.js"></script>
+    <script src="js/obfuscator.js"></script>
+    <script src="js/zipBuilder.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

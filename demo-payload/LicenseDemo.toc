@@ -1,0 +1,7 @@
+## Interface: 110207, 120000
+## Title: LicenseDemo
+## Notes: Character-bound licensed addon demo
+## Author: License Compiler
+## Version: 1.0.0
+
+Core.lua

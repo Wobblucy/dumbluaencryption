@@ -1,0 +1,418 @@
+:root {
+    --bg-dark: #0d1117;
+    --bg-card: #161b22;
+    --bg-input: #0d1117;
+    --border-color: #30363d;
+    --border-focus: #58a6ff;
+    --text-primary: #c9d1d9;
+    --text-secondary: #8b949e;
+    --text-muted: #6e7681;
+    --accent-green: #238636;
+    --accent-green-hover: #2ea043;
+    --accent-blue: #58a6ff;
+    --accent-orange: #d29922;
+    --accent-purple: #a371f7;
+    --error-red: #f85149;
+    --success-green: #3fb950;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-green));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Cards */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.card p {
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#hash-input {
+    flex: 1;
+    padding: 14px 18px;
+    font-size: 1.15rem;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#hash-input:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+}
+
+#hash-input::placeholder {
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+button {
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--accent-green);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--accent-green-hover);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 6px;
+    background-color: var(--bg-dark);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 24px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-green));
+    background-size: 200% 100%;
+    animation: progressGlow 2s ease infinite;
+    transition: width 0.3s ease;
+}
+
+@keyframes progressGlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Status Text */
+.status-text {
+    color: var(--accent-orange);
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* Stage List */
+.stage-list {
+    list-style: none;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.85rem;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.stage-list li {
+    padding: 6px 0;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.stage-list li.complete {
+    color: var(--success-green);
+}
+
+.stage-list li.complete::before {
+    content: "\2713  ";
+}
+
+.stage-list li.active {
+    color: var(--accent-orange);
+}
+
+.stage-list li.active::before {
+    content: "\25B6  ";
+}
+
+.stage-list li.pending::before {
+    content: "\25CB  ";
+}
+
+/* Download Section */
+.download-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    font-size: 1.15rem;
+    margin-top: 20px;
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite;
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, var(--accent-green-hover), var(--accent-blue));
+}
+
+.hash-display {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 16px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--accent-green);
+    letter-spacing: 2px;
+    margin: 16px 0;
+}
+
+.expiry-notice {
+    text-align: center;
+    color: var(--accent-orange);
+    font-size: 0.9rem;
+    margin-top: 12px;
+}
+
+.warning {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: rgba(210, 153, 34, 0.08);
+    border: 1px solid rgba(210, 153, 34, 0.3);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--accent-orange);
+    text-align: center;
+}
+
+/* Next Steps Button */
+.next-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 16px;
+    background-color: var(--accent-blue);
+    font-size: 1rem;
+}
+
+.next-btn:hover {
+    background-color: #4090e0;
+}
+
+/* Installation Steps */
+.step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 16px;
+    background-color: var(--bg-dark);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.step-content h3 {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.step-content p {
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.step-content code.path,
+.step-content code.command {
+    display: inline-block;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
+    color: var(--accent-green);
+}
+
+.file-list {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.file-list li {
+    padding: 4px 0;
+}
+
+.file-list code {
+    color: var(--accent-blue);
+}
+
+.restart-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background-color: var(--border-color);
+}
+
+.restart-btn:hover {
+    background-color: var(--text-muted);
+}
+
+/* Error Message */
+.error {
+    color: var(--error-red);
+    margin-top: 16px;
+    font-size: 0.9rem;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Footer */
+footer {
+    margin-top: 48px;
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+}
+
+.disclaimer {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Scrollbar Styling */
+.stage-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.stage-list::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+    border-radius: 3px;
+}
+
+.stage-list::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+.stage-list::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 16px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    #hash-input {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

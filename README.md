@@ -7,21 +7,12 @@ A portable demonstration of client-side addon licensing for World of Warcraft.
 # Two-Stage Offline Licensing Demo  
 ### Educational Proof-of-Concept for World of Warcraft Addons
 
-## Overview
-This repository contains a **purely educational demonstration** exploring what is *technically possible* using **client-side Lua only** in World of Warcraft addons.
-
-The goal of this project is **research and learning**, not security enforcement.
-
-It illustrates how a character-bound “license” *could* be derived, obfuscated, and validated entirely on the client — **without servers, accounts, or online verification**. Everything runs locally from a zip file and is intentionally easy to inspect, modify, and reverse.
-
 ---
 
 ## What This Demonstrates
 - How WoW exposes character-specific identifiers (GUIDs)
 - How temporal data can be incorporated into validation logic
 - Multi-stage key derivation techniques
-- Common Lua obfuscation patterns used in addons
-- Why trust-based, client-only licensing has hard limits
 
 This project exists to help developers **understand the tradeoffs**, not to promote enforcement or restriction.
 

@@ -2,9 +2,6 @@
 
 [Example Final Result](https://github.com/Wobblucy/dumbluaencryption/blob/main/demo-payload/examplefinaladdon.png)
 
-A portable demonstration of client-side addon licensing for World of Warcraft.
-
-# Two-Stage Offline Licensing Demo  
 ### Educational Proof-of-Concept for World of Warcraft Addons
 
 ---

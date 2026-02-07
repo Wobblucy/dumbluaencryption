@@ -1,5 +1,7 @@
 # Two-Stage Offline Licensing Demo
 
+https://github.com/Wobblucy/dumbluaencryption/blob/main/demo-payload/examplefinaladdon.png
+
 A portable demonstration of client-side addon licensing for World of Warcraft.
 
 ## Overview

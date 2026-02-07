@@ -10,12 +10,9 @@ A portable demonstration of client-side addon licensing for World of Warcraft.
 ---
 
 ## What This Demonstrates
-- How WoW exposes character-specific identifiers (GUIDs)
-- How temporal data can be incorporated into validation logic
-- Multi-stage key derivation techniques
+- How account specific identifiers could be used to generate character specific DRM, along with obfuscation techniques one could use inside the WoW environment.
 
-This project exists to help developers **understand the tradeoffs**, not to promote enforcement or restriction.
-
+  ### Obfuscation is explicitly against the TOS, DO NOT IMPLEMENT THIS IN YOUR ADDON
 ---
 
 ## Quick Start (For Study & Exploration)

@@ -78,4 +78,8 @@ These techniques **raise the cost of inspection**, but would not stand up to som
 - Obfuscation ≠ security
 ## License
 
+## AI Disclaimer
+
+Used, not here trying to spend hours to prove its possible :P
+
 MIT

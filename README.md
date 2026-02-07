@@ -52,6 +52,8 @@ Interface/AddOns/LicenseDemo/
 
 The demo intentionally expires **15 minutes after hash generation** and displays a live countdown to illustrate time-based validation logic.
 
+### Included is a demo payload with the fully unencrypted Addon. 
+
 ---
 
 ## Techniques Shown (Academic Context)

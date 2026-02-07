@@ -56,6 +56,8 @@ The demo intentionally expires **15 minutes after hash generation** and displays
 ## Techniques Shown (Academic Context)
 The following are included **strictly for educational analysis**:
 
+# These are intentionally very naive implementtions, the intention is to demonstrate PoC, not actually make this project hard to crack
+
 - Character-bound identifiers (GUID binding)
 - Short-lived temporal binding
 - Multi-stage key derivation

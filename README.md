@@ -72,10 +72,9 @@ These techniques **raise the cost of casual inspection**, but do not provide rea
 ---
 
 ## Important Notes
-- This project **does not prevent piracy**
+- This project **is solely for educational purposes**
 - Client-side licensing can always be bypassed
 - Obfuscation ≠ security
-- The real value is understanding implementation patterns and limitations
 ## License
 
 MIT
